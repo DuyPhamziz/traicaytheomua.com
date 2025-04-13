@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Quản trị</title>
+
+    <link rel="stylesheet" href="../asset/css/base.css">
+    <link rel="stylesheet" href="../asset/css/main.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark style=" z-index: 1050;">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-3 col-md-1">
+                    <img class="navbar-brand w-100" src="/asset/img/logo_4sf.png">
+                </div>
+                <!-- Thanh điều hướng (Navbar) trên điện thoại -->
+                <div class="col-8 col-md-7 d-flex align-items-center justify-content-end d-md-none">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-1 col-md-7 d-flex align-items-center justify-content-end d-md-none">
+                    <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#cartUserCollapse" aria-controls="cartUserCollapse" aria-expanded="false"
+                        aria-label="Toggle cart and user">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+
+                <div class="col-12 col-md-5 d-flex align-items-center">
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto justify-content-between ml-auto w-100">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Trang chủ Admin</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Form tìm kiếm -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+
+                </div>
+                <!-- Giỏ hàng và đăng nhập -->
+                <div class="col-12 col-md-2 d-flex align-items-center justify-content-end ms-auto d-none d-md-block">
+                    <ul class="navbar-nav ms-auto d-flex w-100 p-0 m-0">
+
+                        &nbsp;&nbsp;
+                        <li class="nav-item d-flex flex-grow-1 text-nowrap w-25">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="userNavLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Đăng nhập &nbsp;&nbsp; <i class="fa-solid fa-user"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item w-50" href="dangnhap.html" href="#">Hồ sơ</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Cài đặt</a></li>
+                                    <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse" id="cartUserCollapse" style="color: aliceblue;">
+                    <div class="d-flex justify-content-between p-3">
+                        <a class="nav-link" href="pages/cart.html">
+                            Giỏ hàng <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a class="nav-link" href="dangnhap.html">
+                            Đăng nhập <i class="fa-solid fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- end header -->
+    <main role="main">
+        <div class="row container">
+            <div class="container-fluid p-3">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-12 col-md-4 col-lg-3 p-0 ">
+                        <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary h-100">
+                            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                                <svg class="bi pe-none me-2" width="40" height="32" aria-hidden="true">
+                                    <use xlink:href="#bootstrap"></use>
+                                </svg>
+                                <span class="fs-5 d-none d-md-inline">Quản Lí Cửa Hàng</span>
+                            </a>
+                            <hr>
+                            <ul class="nav nav-pills flex-column mb-auto">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active" data-target="sanpham">
+                                        <svg class="bi pe-none me-2" width="16" height="16">
+                                            <use xlink:href="#home"></use>
+                                        </svg>
+                                        Sản phẩm
+                                    </a>
+                                </li>
+                                <li><a href="#" class="nav-link link-body-emphasis" data-target="tuvan">
+                                        <svg class="bi pe-none me-2" width="16" height="16">
+                                            <use xlink:href="#speedometer2"></use>
+                                        </svg>
+                                        Tư vấn
+                                    </a></li>
+                                <li><a href="#" class="nav-link link-body-emphasis" data-target="doanhthu">
+                                        <svg class="bi pe-none me-2" width="16" height="16">
+                                            <use xlink:href="#table"></use>
+                                        </svg>
+                                        Doanh thu
+                                    </a></li>
+                                <li><a href="#" class="nav-link link-body-emphasis" data-target="donhang">
+                                        <svg class="bi pe-none me-2" width="16" height="16">
+                                            <use xlink:href="#grid"></use>
+                                        </svg>
+                                        Đơn hàng
+                                    </a></li>
+                                <li><a href="#" class="nav-link link-body-emphasis" data-target="giamgia">
+                                        <svg class="bi pe-none me-2" width="16" height="16">
+                                            <use xlink:href="#people-circle"></use>
+                                        </svg>
+                                        Giảm giá
+                                    </a></li>
+                                <li><a href="#" class="nav-link link-body-emphasis" data-target="hoso">
+                                        <svg class="bi pe-none me-2" width="16" height="16">
+                                            <use xlink:href="#people-circle"></use>
+                                        </svg>
+                                        Hồ sơ hoạt động Admin
+                                    </a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-12 col-md-8 col-lg-9 content_admin p-3">
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+    </main>
+
+    <hr>
+    <footer class="tufooter mt-auto py-3">
+        <div class="tuthongtinfooter">
+            <div class="tuthongtin">
+                <div><b>Bản quyền của Công ty TNHH Morning Fruit</b></div>
+                <div>
+                    Giấy chứng nhận Đăng ký Kinh doanh số 03164646 do Sở Kế hoạch và Đầu tư Tỉnh Hậu Giang cấp ngày 02/01/2025. Đăng ký thay đổi lần 1 ngày 22/03/2025
+                    Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm số 3091/2022/BQLATTP-HCM do Ban Quản lý An toàn thực phẩm Tỉnh Hậu Giang cấp ngày 15/04/2025</div>
+            </div>
+        <div class="tuthongtin">
+            <div><b>Về shop : </b>Shop là thương hiệu trái cây tươi chất lượng cao, với đa dạng sản phẩm phục vụ mọi nhu cầu: đặc sản vùng miền, trái cây nhập khẩu, nước ép</div>
+        </div>
+        <div class="tuthongtin">
+            <div><b>Địa chỉ : </b>Xã Hòa An, huyện Long Mỹ, tỉnh Hậu Giang</div>
+            <div><b>Số điện thoại : </b>0326754284</div>
+            <div><b>Emai : </b>traicay@gmail.com</div>
+        </div>
+        
+        <div class="tuthongtin">
+            <div><b>Hổ trợ khách hàng</b></div>
+            <div>
+                <ul>
+                    <li>Chính sách kiểm hàng</li>
+                    <li>Chính sách bảo hành</li>
+                    <li>Chính sách giao hàng</li>
+                    <li>Chính sách thanh toán</li>
+                    <li>Hướng dẫn mua hàng Online</li>
+                    <li>Kiến thức trái cây</li>
+                    <li>Liên hệ</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="tuthongtin">
+            <div><b>Chăm sóc khách hàng</b></div>
+            <div>
+                <b>Số điện thoại : </b>0326754284
+            </div>
+            <div>
+                <b>Emai : </b>traicay@gmail.com
+            </div>
+            <div><b>Các trang mạng xã hội khác</b></div>
+            <div>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/fb.png" alt=""></a>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/instagram.jfif" alt=""></a>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/zalo.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <hr>
+    <div style="text-align: center; margin: 5px;">
+        Copyright &copy 2025 - Trái Cây Chất Lượng Cao
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            const userNavLink = document.getElementById("userNavLink");
+
+            if (currentUser && userNavLink) {
+                userNavLink.innerHTML = `&nbsp; Chào, ${currentUser.userFullName} &nbsp;&nbsp; <i class="fa-solid fa-user"></i>`;
+                userNavLink.href = "#"; // hoặc link tới trang cá nhân
+            }
+        });
+    </script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.querySelector('.nav-link[data-target="sanpham"]')?.click();
+    </script>
+
+
+    <script src="/admin/asset/js/work_admin.js"></script>
+    <script src="/admin/asset/js/app.js"></script>
+    <script src="/admin/asset/js/sale.js"></script>
+    <script src="/admin/asset/js/mess.js"></script>
+
+
+
+</body>
+
+
+</html>

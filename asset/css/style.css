@@ -1,0 +1,7 @@
+/* Nội dung từ bootstrap.css */
+@import url("/vendor/bootstrap/css/bootstrap.min.css");
+/* Nội dung từ base.css */
+@import url("/asset/css/base.css");
+@import url("/asset/css/main.css");
+/* Nội dung từ font-awesome */
+@import url("/vendor/font-awesome/font-awesome-6-pro-main/css/all.css");

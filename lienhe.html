@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trái cây bốn mùa</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/asset/css/base.css">
+    <link rel="stylesheet" href="/asset/css/main.css">
+    <link rel="stylesheet" href="vendor/font-awesome/font-awesome-6-pro-main/css/all.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-3 col-md-1">
+                    <img class="navbar-brand w-100" src="/asset/img/logo_4sf.png">
+                </div>
+                <!-- Thanh điều hướng (Navbar) trên điện thoại -->
+                <div class="col-8 col-md-7 d-flex align-items-center justify-content-end d-md-none">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-1 col-md-7 d-flex align-items-center justify-content-end d-md-none">
+                    <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#cartUserCollapse" aria-controls="cartUserCollapse" aria-expanded="false"
+                        aria-label="Toggle cart and user">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+
+                <div class="col-12 col-md-5 d-flex align-items-center">
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto justify-content-between ml-auto w-100">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sanpham.html">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên hệ</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Form tìm kiếm -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                    <form class="form-inline mt-2 mt-md-0 w-100" method="get" action="pages/search.html">
+                        <div class="input-group w-100">
+                            <input class="form-control mr-sm-2 w-75" type="text" placeholder="Tìm kiếm ở đây"
+                                aria-label="Search" name="keyword_tensanpham">
+                            <button class="btn btn-outline-success w-25" type="submit">Tìm kiếm</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Giỏ hàng và đăng nhập -->
+                <div class="col-12 col-md-2 d-flex align-items-center justify-content-end ms-auto d-none d-md-block">
+                    <ul class="navbar-nav ms-auto d-flex w-100 p-0 m-0">
+                        <li class="nav-item d-flex flex-grow-1 text-nowrap w-25">
+                            <a class="nav-link w-50" href="pages/cart.html">Giỏ hàng <i
+                                    class="fa-sharp fa-solid fa-cart-shopping"></i> </a>
+                        </li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item d-flex flex-grow-1 text-nowrap w-25">
+                            <a class="nav-link w-50" href="dangnhap.html">Đăng nhập <i class="fa-solid fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse" id="cartUserCollapse" style="color: aliceblue;">
+                    <div class="d-flex justify-content-between p-3">
+                        <a class="nav-link" href="pages/cart.html">
+                            Giỏ hàng <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a class="nav-link" href="dangnhap.html">
+                            Đăng nhập <i class="fa-solid fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- end header -->
+
+
+    <main role="main">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="w-60" src="/asset/img/4anhtai.jpg">
+                </div>
+                <div class="col-md-9">
+                    <h2 class="featurette-heading">Welcome to Trai Cay Bon Mua </h2>
+                    <p class="lead">Khám phá thế giới trái cây tươi ngon, chất lượng thượng hạng, được tuyển chọn tinh
+                        tế từ
+                        khắp dải đất Việt và nhập khẩu từ những vùng đất trù phú danh tiếng toàn cầu. Với tâm huyết
+                        "Tươi
+                        ngon mỗi ngày, vun đắp sức khỏe", chúng tôi cam kết trao đến bạn những sản phẩm chín mọng tự
+                        nhiên,
+                        tuyệt đối không hóa chất bảo quản, đạt chuẩn an toàn vệ sinh thực phẩm. Mỗi mùa, Trái Cây Bốn
+                        Mùa
+                        mang đến sự phong phú của hương vị, độ tươi mới hoàn hảo và mức giá ưu đãi. Tận hưởng trải
+                        nghiệm
+                        mua sắm an tâm với vô vàn chương trình khuyến mãi hấp dẫn, combo tiết kiệm độc đáo cùng dịch vụ
+                        giao
+                        hàng siêu tốc. Trái Cây Bốn Mùa – nơi hội tụ tinh túy tự nhiên, trao trọn an lành trong từng
+                        khoảnh
+                        khắc thưởng thức.
+                    </p>
+                </div>
+
+            </div>
+
+        </div v class="container" v>
+        <hr class="featurette-divider">
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+        <div class="container mt-2">
+            <h1 class="text-center">Liên hệ với Trái cây bốn mùa</h1>
+            <div class="row">
+                <div class="col col-md-5">
+                    <img id="lienhe_banner" src="/asset/img/traiacquy/banner_lienhe.jpg">
+                </div>
+                <div class="col col-md-7">
+                    <form method="post" id="contact-form" class="fs-3">
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Email của bạn">
+                        </div>
+                        <div class="form-group">
+                            <label for="title"></label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Họ và tên">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"></label>
+                            <textarea name="message" class="form-control" placeholder="Lời nhắn của bạn, có thể kèm số điện thoại để chúng tôi liên lạc với bạn"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="btnGoiLoiNhan">Gởi lời nhắn</button>
+                    </form>
+                </div>
+
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette d-flex align-items-center">
+                <div class="col-md-7 order-md-4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12975.46151822487!2d105.59111452818152!3d9.764213280596927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0f1d182b3d5b9%3A0x12253499637acf6f!2zS2h1IEjDsmEgQW4gxJBIIEPhuqduIFRoxqEsIFFMNjEsIEhvw6AgQW4sIFBo4bulbmcgSGnhu4dwLCBI4bqtdSBHaWFuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1744007090260!5m2!1svi!2s"
+                        width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-md-5 order-md-2">
+                    <h2 class="featurette-heading">Địa chỉ</h2>
+                    <p class="lead">Tại Khu Hòa An, trường Đại học Cần Thơ, xã Hòa An, huyện Phụng Hiệp, tỉnh Hậu Giang.
+                    </p>
+                    <p class="lead">Hotline Support: 0338892575.
+                    </p>
+                </div>
+
+            </div>
+
+            <hr class="featurette-divider">
+        </div>
+        <!-- End block content -->
+    </main>
+
+    <hr>
+    <footer class="tufooter mt-auto py-3">
+        <div class="tuthongtinfooter">
+            <div class="tuthongtin">
+                <div><b>Bản quyền của Công ty TNHH Morning Fruit</b></div>
+                <div>
+                    Giấy chứng nhận Đăng ký Kinh doanh số 03164646 do Sở Kế hoạch và Đầu tư Tỉnh Hậu Giang cấp ngày 02/01/2025. Đăng ký thay đổi lần 1 ngày 22/03/2025
+                    Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm số 3091/2022/BQLATTP-HCM do Ban Quản lý An toàn thực phẩm Tỉnh Hậu Giang cấp ngày 15/04/2025</div>
+            </div>
+        <div class="tuthongtin">
+            <div><b>Về shop : </b>Shop là thương hiệu trái cây tươi chất lượng cao, với đa dạng sản phẩm phục vụ mọi nhu cầu: đặc sản vùng miền, trái cây nhập khẩu, nước ép</div>
+        </div>
+        <div class="tuthongtin">
+            <div><b>Địa chỉ : </b>Xã Hòa An, huyện Long Mỹ, tỉnh Hậu Giang</div>
+            <div><b>Số điện thoại : </b>0326754284</div>
+            <div><b>Emai : </b>traicay@gmail.com</div>
+        </div>
+        
+        <div class="tuthongtin">
+            <div><b>Hổ trợ khách hàng</b></div>
+            <div>
+                <ul>
+                    <li>Chính sách kiểm hàng</li>
+                    <li>Chính sách bảo hành</li>
+                    <li>Chính sách giao hàng</li>
+                    <li>Chính sách thanh toán</li>
+                    <li>Hướng dẫn mua hàng Online</li>
+                    <li>Kiến thức trái cây</li>
+                    <li>Liên hệ</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="tuthongtin">
+            <div><b>Chăm sóc khách hàng</b></div>
+            <div>
+                <b>Số điện thoại : </b>0326754284
+            </div>
+            <div>
+                <b>Emai : </b>traicay@gmail.com
+            </div>
+            <div><b>Các trang mạng xã hội khác</b></div>
+            <div>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/fb.png" alt=""></a>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/instagram.jfif" alt=""></a>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/zalo.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <hr>
+    <div style="text-align: center; margin: 5px;">
+        Copyright &copy 2025 - Trái Cây Chất Lượng Cao
+    </div>
+    <div id="tuoverlay">
+        <div class="tuoverlay-content">
+          <!-- Nút X -->
+          <button id="tucloseOverlayBtnX">&times;</button>
+    
+          <div id="tuchu">Bạn chưa đăng nhập</div>
+          <img id="tuhinhchuadn" src="asset/img/chuadangnhap.png" alt="Chưa đăng nhập">
+          <div class="tu2thongtin">
+            <p>Để tiếp tục mua hàng vui lòng <a class="tudndk" href="#">đăng nhập</a>.</p>
+            <p>Nếu bạn chưa có tài khoản hãy <a class="tudndk" href="#">đăng ký</a> nhé!</p>
+            <div style="text-align: center;">
+                     <button id="tucloseOverlayBtn">Đóng</button>
+            </div>
+       
+          </div>
+        </div>
+      </div>
+      <script src="asset/js/tujskiemtra.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lắng nghe sự kiện submit form
+            const contactForm = document.getElementById("contact-form");
+
+            if (contactForm) {
+                contactForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    // Lấy giá trị từ form
+                    const email = document.getElementById("email").value;
+                    const title = document.getElementById("title").value;
+                    const message = document.querySelector("textarea[name='message']").value;
+
+                    if (email && title && message) {
+                        // Lưu lời nhắn vào localStorage
+                        const contactMessages = JSON.parse(localStorage.getItem("contactMessages")) || [];
+                        const newMessage = {
+                            email,
+                            title,
+                            message,
+                            date: new Date().toLocaleString(), // 🕒 Thời gian gửi
+                            read: false // 👀 Trạng thái chưa đọc
+                        };
+                        contactMessages.push(newMessage);
+
+                        localStorage.setItem("contactMessages", JSON.stringify(contactMessages));
+
+                        // Sau khi gửi, làm trống form và thông báo
+                        contactForm.reset();
+                        alert("Lời nhắn đã được gửi thành công.");
+                    } else {
+                        alert("Vui lòng điền đầy đủ thông tin.");
+                    }
+                });
+            } else {
+                console.error("Không tìm thấy phần tử '#contact-form'");
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

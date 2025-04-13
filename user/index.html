@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trái cây bốn mùa</title>
+    <link rel="stylesheet" href="/asset/css/style.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-3 col-md-1">
+                    <img class="navbar-brand w-100" src="/asset/img/logo_4sf.png">
+                </div>
+                <!-- Thanh điều hướng (Navbar) trên điện thoại -->
+                <div class="col-8 col-md-7 d-flex align-items-center justify-content-end d-md-none">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-1 col-md-7 d-flex align-items-center justify-content-end d-md-none">
+                    <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#cartUserCollapse" aria-controls="cartUserCollapse" aria-expanded="false"
+                        aria-label="Toggle cart and user">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+
+                <div class="col-12 col-md-5 d-flex align-items-center">
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto justify-content-between ml-auto w-100">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/gioithieu.html">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/sanpham.html">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/lienhe.html">Liên hệ</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Form tìm kiếm -->
+                <div class="col-12 col-md-3 d-flex align-items-center justify-content-center">
+
+                </div>
+                <!-- Giỏ hàng và đăng nhập -->
+                <div class="col-12 col-md-3 d-flex align-items-center justify-content-end ms-auto d-none d-md-block">
+                    <ul class="navbar-nav ms-auto d-flex w-100 p-0 m-0">
+                        <li class="nav-item d-flex flex-grow-1 text-nowrap w-25">
+                            <a class="nav-link w-50" href="" id="cartLink">Giỏ hàng <i
+                                    class="fa-sharp fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item d-flex flex-grow-1 text-nowrap w-25">
+                            <a class="nav-link w-50" href="dangnhap.html" id="userNavLink"> Đăng nhập <i
+                                    class="fa-solid fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Lớp phủ -->
+                <div id="loginOverlay" class="overlay">
+                    <div class="overlay-content">
+                        <h3>Bạn cần đăng nhập để xem giỏ hàng.</h3>
+                        <a href="dangnhap.html" class="btn btn-primary">Đăng nhập</a>
+                        <button id="closeOverlay" class="btn btn-secondary">Đóng</button>
+                    </div>
+                </div>
+                <div class="collapse" id="cartUserCollapse" style="color: aliceblue;">
+                    <div class="d-flex justify-content-between p-3">
+                        <a class="nav-link" href="pages/cart.html">
+                            Giỏ hàng <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a class="nav-link" href="dangnhap.html">
+                            Đăng nhập <i class="fa-solid fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- end header -->
+
+    <main role="main">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/asset/img/slide_show/slide_show1.png" style=" object-fit: cover;" class="d-block w-100"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/asset/img/slide_show/slide_show2.png" style=" object-fit: cover;" class="d-block w-100"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/asset/img/slide_show/slide_show3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+
+        <!-- Tính năng Marketing -->
+        <div class="container marketing">
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="img_description d-flex justify-content-center"><img
+                            class="bd-placeholder-img rounded-circle" width="140" height="140"
+                            src="/asset/img/4mua/xuan.png"></div>
+                    <h2>Mùa Xuân - Tươi Mới và Sức Khỏe</h2>
+                    <p>Chào đón mùa xuân với những trái cây tươi ngon! Mùa xuân là mùa của sự đổi mới và năng lượng. Hãy
+                        bắt đầu ngày mới bằng những trái cây tươi mới, ngọt ngào và giàu dinh dưỡng. Trái cây mùa xuân
+                        giúp bổ sung vitamin và khoáng chất, mang lại sức sống mới cho cơ thể.</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <div class="img_description d-flex justify-content-center">
+                        <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+                            src="/asset/img/4mua/ha.jpg">
+                    </div>
+                    <h2>Mùa Hạ - Giải Nhiệt và Mát Lạnh</h2>
+                    <p>Giải nhiệt mùa hè với trái cây tươi mát, mọng nước! Khi mùa hè đến, hãy để trái cây mát lạnh giúp
+                        bạn xua tan cái nóng bức!</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <div class="img_description d-flex justify-content-center">
+                        <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+                            src="/asset/img/4mua/thu.jpg">
+                    </div>
+                    <h2>Mùa Thu - Ngọt Ngào và Bổ Dưỡng</h2>
+                    <p>Thu về, thưởng thức trái cây ngọt ngào và bổ dưỡng! Mùa thu là thời điểm lý tưởng để thưởng thức
+                        những loại trái cây ngọt ngào, bổ dưỡng. Những trái táo giòn ngọt, lê thơm lừng hay nhãn tươi
+                        mát đều là sự lựa chọn hoàn hảo cho mùa thu này. Trái cây mùa thu không chỉ ngon miệng mà còn
+                        giúp cung cấp nhiều dưỡng chất, mang lại sức khỏe và sự thư giãn cho bạn và gia đình.</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <div class="img_description d-flex justify-content-center">
+                        <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+                            src="/asset/img/4mua/dong.jpg">
+                    </div>
+                    <h2>Mùa Đông - Ấm Áp và Bổ Sung Vitamin</h2>
+                    <p>Giữ ấm cơ thể với trái cây mùa đông bổ dưỡng! Mùa đông lạnh giá, hãy bảo vệ sức khỏe của bạn và
+                        gia đình bằng những trái cây giàu vitamin C như cam, quýt, kiwi. Những trái cây này không chỉ
+                        giúp tăng cường hệ miễn dịch mà còn mang đến hương vị tươi mới, ấm áp trong những ngày đông se
+                        lạnh.</p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <h2 class="featurette-heading">Mua Trái Cây <span class="text-muted">Online</span> Dễ Dàng
+                    </h2>
+                    <p class="lead">Giao hỏa tốc - Đảm bảo tươi mát khi đến tay khách hàng.</p>
+
+                </div>
+                <div class="col-md-7">
+                    <img class="w-100" src="/asset/img/onlShip.png">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-5 order-md-2">
+                    <h2 class="featurette-heading"> Trái Cây Bốn Mùa - <span class="text-muted">Khám Phá Lợi Ích Sức
+                            Khỏe</span></h2>
+                    <p class="lead">Thực phẩm giàu Vitamin - mang lại nhiều lợi ích về Sức khỏe.</p>
+
+                </div>
+                <div class="col-md-7 order-md-1">
+                    <img class="w-100" src="/asset/img/heal.png">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+            <!-- /END THE FEATURETTES -->
+        </div>
+
+        <!-- Danh sách sản phẩm -->
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Danh mục Sản phẩm</h1>
+                <p class="lead text-muted">Các sản phẩm với chất lượng, uy tín, cam kết từ nhà Sản xuất.</p>
+            </div>
+        </section>
+
+        <!-- Giải thuật duyệt và render Danh sách sản phẩm theo dòng, cột của Bootstrap -->
+        <div class="danhsachsanpham py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="pages/product-detail.html">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                    src="/asset/img/1x/banana.png">
+                            </a>
+                            <div class="card-body">
+                                <a href="pages/product-detail.html">
+                                    <h5>Chuối</h5>
+                                </a>
+                                <h6>Trái cây Việt Nam</h6>
+                                <p class="card-text">Trái cây quen thuộc, phong phú về chủng loại và có giá trị dinh
+                                    dưỡng cao.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-secondary" href="pages/product-detail.html">Xem
+                                            chi tiết</a>
+                                    </div>
+                                    <small class="text-muted text-right">
+                                        <s>59,000 </s>
+                                        <b>39,000 VNĐ / kg</b>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="pages/product-detail.html">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                    src="/asset/img/1x/mangcut.png">
+                            </a>
+                            <div class="card-body">
+                                <a href="pages/product-detail.html">
+                                    <h5>Măng cụt</h5>
+                                </a>
+                                <h6>Trái cây Việt Nam</h6>
+                                <p class="card-text">Một loại trái cây hấp dẫn với hương vị ngọt ngào và giá trị dinh
+                                    dưỡng cao, không
+                                    chỉ ngon miệng mà còn tốt cho sức khỏe.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-secondary" href="pages/product-detail.html">Xem
+                                            chi tiết</a>
+                                    </div>
+                                    <small class="text-muted text-right">
+                                        <s>90,000</s>
+                                        <b>79,000 VNĐ / kg</b>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="pages/product-detail.html">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                    src="/asset/img/1x/sapoche.png">
+                            </a>
+                            <div class="card-body">
+                                <a href="pages/product-detail.html">
+                                    <h5>Sa pô chê</h5>
+                                </a>
+                                <h6>Trái cây Việt Nam</h6>
+                                <p class="card-text">Một loại trái cây thơm ngon, giàu dinh dưỡng và có hương vị ngọt
+                                    ngào, thích hợp để ăn tươi hoặc chế biến thành nhiều món ăn bổ dưỡng.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-secondary" href="pages/product-detail.html">Xem
+                                            chi tiết</a>
+                                    </div>
+                                    <small class="text-muted text-right">
+                                        <s>79,000</s>
+                                        <b>50,000 VND / kg</b>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="pages/product-detail.html">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                    src="assets/img/product/iphone5-white.jpeg">
+                            </a>
+                            <div class="card-body">
+                                <a href="pages/product-detail.html">
+                                    <h5>Apple iPhone 5 16GB White</h5>
+                                </a>
+                                <h6>Điện thoại</h6>
+                                <p class="card-text">CPU: Dual-core 1 GHz - Màu trắng</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-secondary" href="pages/product-detail.html">Xem
+                                            chi tiết</a>
+                                    </div>
+                                    <small class="text-muted text-right">
+                                        <s>0.00</s>
+                                        <b>14,990,000.00 vnđ</b>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="pages/product-detail.html">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                    src="assets/img/product/samsung-galaxy-tab-10.jpg">
+                            </a>
+                            <div class="card-body">
+                                <a href="pages/product-detail.html">
+                                    <h5>Samsung Galaxy Tab 10.1 3G 16G</h5>
+                                </a>
+                                <h6>Máy tính bảng</h6>
+                                <p class="card-text">Màn hình 10.1 inch cảm ứng đa điểm</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-secondary" href="pages/product-detail.html">Xem
+                                            chi tiết</a>
+                                    </div>
+                                    <small class="text-muted text-right">
+                                        <s>12,000,000.00</s>
+                                        <b>10,990,000.00 vnđ</b>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="pages/product-detail.html">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                    src="assets/img/product/nokia-asha-311.jpg">
+                            </a>
+                            <div class="card-body">
+                                <a href="pages/product-detail.html">
+                                    <h5>Nokia Asha 311</h5>
+                                </a>
+                                <h6>Điện thoại</h6>
+                                <p class="card-text">Điện thoại di động Nokia Asha 311</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-secondary" href="pages/product-detail.html">Xem
+                                            chi tiết</a>
+                                    </div>
+                                    <small class="text-muted text-right">
+                                        <s>3,000,000.00</s>
+                                        <b>2,699,000.00 vnđ</b>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="pages/product-detail.html">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                    src="assets/img/product/samsung-galaxy-tab.jpg">
+                            </a>
+                            <div class="card-body">
+                                <a href="pages/product-detail.html">
+                                    <h5>Samsung Galaxy Tab 2 7.0</h5>
+                                </a>
+                                <h6>Máy tính bảng</h6>
+                                <p class="card-text">Máy tính bảng Samsung Galaxy Tab 2 7.0 </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-secondary" href="pages/product-detail.html">Xem
+                                            chi tiết</a>
+                                    </div>
+                                    <small class="text-muted text-right">
+                                        <s>7,950,000.00</s>
+                                        <b>7,500,000.00 vnđ</b>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- End block content -->
+    </main>
+    <hr>
+    <footer class="tufooter mt-auto py-3">
+        <div class="tuthongtinfooter">
+            <div class="tuthongtin">
+                <div><b>Bản quyền của Công ty TNHH Morning Fruit</b></div>
+                <div>
+                    Giấy chứng nhận Đăng ký Kinh doanh số 03164646 do Sở Kế hoạch và Đầu tư Tỉnh Hậu Giang cấp ngày 02/01/2025. Đăng ký thay đổi lần 1 ngày 22/03/2025
+                    Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm số 3091/2022/BQLATTP-HCM do Ban Quản lý An toàn thực phẩm Tỉnh Hậu Giang cấp ngày 15/04/2025</div>
+            </div>
+        <div class="tuthongtin">
+            <div><b>Về shop : </b>Shop là thương hiệu trái cây tươi chất lượng cao, với đa dạng sản phẩm phục vụ mọi nhu cầu: đặc sản vùng miền, trái cây nhập khẩu, nước ép</div>
+        </div>
+        <div class="tuthongtin">
+            <div><b>Địa chỉ : </b>Xã Hòa An, huyện Long Mỹ, tỉnh Hậu Giang</div>
+            <div><b>Số điện thoại : </b>0326754284</div>
+            <div><b>Emai : </b>traicay@gmail.com</div>
+        </div>
+        
+        <div class="tuthongtin">
+            <div><b>Hổ trợ khách hàng</b></div>
+            <div>
+                <ul>
+                    <li>Chính sách kiểm hàng</li>
+                    <li>Chính sách bảo hành</li>
+                    <li>Chính sách giao hàng</li>
+                    <li>Chính sách thanh toán</li>
+                    <li>Hướng dẫn mua hàng Online</li>
+                    <li>Kiến thức trái cây</li>
+                    <li>Liên hệ</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="tuthongtin">
+            <div><b>Chăm sóc khách hàng</b></div>
+            <div>
+                <b>Số điện thoại : </b>0326754284
+            </div>
+            <div>
+                <b>Emai : </b>traicay@gmail.com
+            </div>
+            <div><b>Các trang mạng xã hội khác</b></div>
+            <div>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/fb.png" alt=""></a>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/instagram.jfif" alt=""></a>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/zalo.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <hr>
+    <div style="text-align: center; margin: 5px;">
+        Copyright &copy 2025 - Trái Cây Chất Lượng Cao
+    </div>
+
+
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        const userNavLink = document.getElementById("userNavLink");
+
+        if (currentUser && userNavLink) {
+            userNavLink.innerHTML = `&nbsp; Chào, ${currentUser.userFullName} <i class="fa-solid fa-user"></i>`;
+            userNavLink.href = "#"; // hoặc link tới trang cá nhân
+        }
+    });
+</script>
+
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</html>

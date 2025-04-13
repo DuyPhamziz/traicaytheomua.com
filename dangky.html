@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trái cây bốn mùa</title>
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="/asset/css/main.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-3 col-md-1">
+                    <img class="navbar-brand w-100" src="/asset/img/logo_4sf.png">
+                </div>
+                <!-- Thanh điều hướng (Navbar) trên điện thoại -->
+                <div class="col-8 col-md-7 d-flex align-items-center justify-content-end d-md-none">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-1 col-md-7 d-flex align-items-center justify-content-end d-md-none">
+                    <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#cartUserCollapse" aria-controls="cartUserCollapse" aria-expanded="false"
+                        aria-label="Toggle cart and user">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+
+                <div class="col-12 col-md-5 d-flex align-items-center">
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto justify-content-between ml-auto w-100">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sanpham.html">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a onclick="showOverlay()" class="nav-link">Liên hệ</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Form tìm kiếm -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+
+                </div>
+                <!-- Giỏ hàng và đăng nhập -->
+                <div class="col-12 col-md-2 d-flex align-items-center justify-content-end ms-auto d-none d-md-block">
+                    <ul class="navbar-nav ms-auto d-flex w-100 p-0 m-0">
+                        <li class="nav-item d-flex flex-grow-1 text-nowrap w-25">
+                            <a onclick="showOverlay()" class="nav-link w-50" >Giỏ hàng <i
+                                    class="fa-sharp fa-solid fa-cart-shopping"></i> </a>
+                        </li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item d-flex flex-grow-1 text-nowrap w-25">
+                            <a class="nav-link w-50" href="dangnhap.html">Đăng nhập <i class="fa-solid fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse" id="cartUserCollapse" style="color: aliceblue;">
+                    <div class="d-flex justify-content-between p-3">
+                        <a class="nav-link" href="pages/cart.html">
+                            Giỏ hàng <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a class="nav-link" href="dangnhap.html">
+                            Đăng nhập <i class="fa-solid fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- end header -->
+    <main role="main">
+        <div class="signup-content row">
+            <div class="signup-form col-md-6">
+                <h2 class="form-title">Đăng Ký</h2>
+                <form method="" class="register-form" id="register-form">
+                    <div class="form-group">
+                        <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input type="text" name="name" id="name" placeholder="Tên Tài Khoản">
+                        <div style="color: red; display: none;" id="userError">Tên tài khoản có độ dài từ 3 đến 12 kì tự
+                            và không được để trống</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input type="text" name="fname" id="fullname" placeholder="Họ và tên">
+                        <div style="color: red; display: none;" id="fnameError">Điền đầy đủ Họ và tên</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="zmdi zmdi-email"></i></label>
+                        <input type="text" name="phone" id="phone" placeholder="Số điện thoại">
+                        <div style="color: red; display: none;" id="phoneError">Vui lòng nhập chính xác số điện thoại
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="row">
+                            <div class="col-3" style=" text-align: center;">
+                                <label for="address"><i class="zmdi zmdi-add"></i>Địa chỉ</label>
+                            </div>
+
+                            <div class="col-3">
+                                <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
+                                    <option value="" selected>Chọn tỉnh thành</option>
+                                </select>
+                            </div>
+                            <div class="col-3"><select class="form-select form-select-sm mb-3" id="district"
+                                    aria-label=".form-select-sm">
+                                    <option value="" selected>Chọn quận huyện</option>
+                                </select></div>
+                            <div class="col-3"><select class="form-select form-select-sm" id="ward"
+                                    aria-label=".form-select-sm">
+                                    <option value="" selected>Chọn phường xã</option>
+                                </select></div>
+                            <div style="color: red; display: none;" id="addError">Vui lòng chọn địa chỉ</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="password" name="pass" id="pass" placeholder="Mật khẩu">
+                        <div style="color: red; display: none;" id="passError">Vui lòng nhập mật khẩu</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                        <input type="password" name="re_pass" id="re_pass" placeholder="Nhập lại mật khẩu">
+                        <div style="color: red; display: none;" id="repassError">Vui lòng nhập lại mật khẩu</div>
+                        <div style="color: red; display: none;" id="repassError2">Mật khẩu nhập lại không khớp</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term">
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>Tôi đồng ý với tất cả
+                            <a href="#" class="term-service">điều khoản và chính sách </a>của cửa hàng</label>
+                    </div>
+                    <div class="form-group form-button">
+                        <button type="submit" name="signup" id="signup" class="form-submit" value="register"> ĐĂNG KÝ
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+
+            <img class="signup-image col-md-6" src="asset/img/hiRegester.png" style="width: 30%;" alt=" sing up image">
+            <a href="#" class="signup-image-link">I am already member</a>
+
+        </div>
+    </main>
+
+    <hr>
+    <footer class="tufooter mt-auto py-3">
+        <div class="tuthongtinfooter">
+            <div class="tuthongtin">
+                <div><b>Bản quyền của Công ty TNHH Morning Fruit</b></div>
+                <div>
+                    Giấy chứng nhận Đăng ký Kinh doanh số 03164646 do Sở Kế hoạch và Đầu tư Tỉnh Hậu Giang cấp ngày 02/01/2025. Đăng ký thay đổi lần 1 ngày 22/03/2025
+                    Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm số 3091/2022/BQLATTP-HCM do Ban Quản lý An toàn thực phẩm Tỉnh Hậu Giang cấp ngày 15/04/2025</div>
+            </div>
+        <div class="tuthongtin">
+            <div><b>Về shop : </b>Shop là thương hiệu trái cây tươi chất lượng cao, với đa dạng sản phẩm phục vụ mọi nhu cầu: đặc sản vùng miền, trái cây nhập khẩu, nước ép</div>
+        </div>
+        <div class="tuthongtin">
+            <div><b>Địa chỉ : </b>Xã Hòa An, huyện Long Mỹ, tỉnh Hậu Giang</div>
+            <div><b>Số điện thoại : </b>0326754284</div>
+            <div><b>Emai : </b>traicay@gmail.com</div>
+        </div>
+        
+        <div class="tuthongtin">
+            <div><b>Hổ trợ khách hàng</b></div>
+            <div>
+                <ul>
+                    <li>Chính sách kiểm hàng</li>
+                    <li>Chính sách bảo hành</li>
+                    <li>Chính sách giao hàng</li>
+                    <li>Chính sách thanh toán</li>
+                    <li>Hướng dẫn mua hàng Online</li>
+                    <li>Kiến thức trái cây</li>
+                    <li>Liên hệ</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="tuthongtin">
+            <div><b>Chăm sóc khách hàng</b></div>
+            <div>
+                <b>Số điện thoại : </b>0326754284
+            </div>
+            <div>
+                <b>Emai : </b>traicay@gmail.com
+            </div>
+            <div><b>Các trang mạng xã hội khác</b></div>
+            <div>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/fb.png" alt=""></a>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/instagram.jfif" alt=""></a>
+                <a href="https://www.facebook.com/share/1AEdqtmWEC/" >
+                    <img class="tuMXH"src="asset/img/logo.mxh/zalo.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <hr>
+    <div style="text-align: center; margin: 5px;">
+        Copyright &copy 2025 - Trái Cây Chất Lượng Cao
+    </div>
+    <div id="tuoverlay">
+        <div class="tuoverlay-content">
+          <!-- Nút X -->
+          <button id="tucloseOverlayBtnX">&times;</button>
+    
+          <div id="tuchu">Bạn chưa đăng nhập</div>
+          <img id="tuhinhchuadn" src="asset/img/chuadangnhap.png" alt="Chưa đăng nhập">
+          <div class="tu2thongtin">
+            <p>Để tiếp tục mua hàng vui lòng <a class="tudndk" href="#">đăng nhập</a>.</p>
+            <p>Nếu bạn chưa có tài khoản hãy <a class="tudndk" href="#">đăng ký</a> nhé!</p>
+            <div style="text-align: center;">
+                     <button id="tucloseOverlayBtn">Đóng</button>
+            </div>
+       
+          </div>
+        </div>
+      </div>
+      <script src="asset/js/tujskiemtra.js"></script>
+
+
+</body>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="asset/js/axios.min.js"></script>
+<script src="asset/js/selectOptionAddress.js"></script>
+<script src="asset/js/register.js"></script>
+
+</html>

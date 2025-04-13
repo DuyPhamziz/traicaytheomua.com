@@ -1,0 +1,82 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --header-height: 150px;
+  --navbar-height: 60px;
+  --header-with-search-height: calc(var(--header-height) - var(--navbar-height) -5px);
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  line-height: 1.6rem;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1rem;
+
+}
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid__full-width {
+  width: 100%;
+}
+
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .neta-slider-img {
+    height: 140px;
+    object-fit: cover;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .neta-slider-img {
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .neta-slider-img {
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .neta-slider-img {
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .neta-slider-img {
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .neta-carousel-text {
+    background-color: red;
+    font-size: 2rem;
+  }
+}
